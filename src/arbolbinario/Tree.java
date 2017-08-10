@@ -6,6 +6,9 @@
 package arbolbinario;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
  *
@@ -57,7 +60,56 @@ public class Tree {
         }
     }
     
-    public void niveles(Node root){
-        
+    public void orderLevel(Node root){
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        while (!queue.isEmpty()) {            
+            Node temp = queue.poll();
+            System.out.print(temp.key+"  ");
+            if (temp.left!=null) {
+                queue.add(temp.left);
+            }
+            if (temp.right!=null) {
+                queue.add(temp.right);
+            }
+        }
+    }
+    
+    public void orderLevelInv(Node root){
+        Stack stack = new Stack();
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        while (!queue.isEmpty()) {            
+            Node temp = queue.poll();
+            stack.push(temp);
+            if (temp.right!=null) {
+                queue.add(temp.right);
+            }
+            if (temp.left!=null) {
+                queue.add(temp.left);
+            }
+        }
+        while (!stack.empty()) {            
+            Node temp = (Node) stack.pop();
+            System.out.print(temp.key+"  ");
+        }
+    }
+    
+    public boolean isEstable(Node root){
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        while (!queue.isEmpty()) {            
+            Node temp = queue.poll();
+//            System.out.println(temp.key);
+            if (temp.left!=null) {
+                queue.add(temp.left);
+                if(Integer.parseInt(temp.key)<Integer.parseInt(temp.left.key)) return false;
+            }
+            if (temp.right!=null) {
+                queue.add(temp.right);
+                if(Integer.parseInt(temp.key)<Integer.parseInt(temp.right.key)) return false;
+            } 
+        }
+        return true;
     }
 }

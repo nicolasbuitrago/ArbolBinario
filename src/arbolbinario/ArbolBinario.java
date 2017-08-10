@@ -22,12 +22,18 @@ public class ArbolBinario {
     public static void main(String[] args) {
         
         createTree();
-        System.out.println("Inorder");
+        System.out.println("Inorder: ");
         tree.inOrder(tree.nodes.get(0));
-        System.out.println("\nPreorden");
+        System.out.println("\nPreorden: ");
         tree.preOrder(tree.nodes.get(0));
-        System.out.println("\nPostorder");
+        System.out.println("\nPostorder: ");
         tree.postOrder(tree.nodes.get(0));
+        System.out.println("\nOrder Level: ");
+        tree.orderLevel(tree.nodes.get(0));
+        System.out.println("\nOrder Level Inv: ");
+        tree.orderLevelInv(tree.nodes.get(0));
+        System.out.println("\nEs estable: ");
+        System.out.println(tree.isEstable(tree.nodes.get(0)));
     }
     
     public static void createTree(){
