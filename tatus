@@ -1,0 +1,23 @@
+[33mcommit 2adf7d5278f08c9325483c68c08cf1beb06cf4d7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Bloque G <Bloque G@10.20.46.144>
+Date:   Fri Aug 18 00:43:45 2017 -0500
+
+    Cambiado la clase Node de un valor de String a un valor int
+
+[33mcommit 3b246d1b721801029793d333173141e4c0735465[m
+Author: Bloque G <Bloque G@10.20.46.144>
+Date:   Fri Aug 18 00:09:36 2017 -0500
+
+    Añadida funcion busqueda que solo funciona a los arboles ordenados a la clase Tree
+
+[33mcommit 0799e0119887d5505fc3c19d0165293fe3d93f32[m
+Author: nicolasbuitrago <nicolasbuitrago@SU6-16.uninorteacad.uninorte.edu.co>
+Date:   Thu Aug 10 12:10:02 2017 -0500
+
+    Clase 10/08 Recorrido arbol binario por niveles, recorrido por niveles invertido y verifica si un arbol binario es estable.
+
+[33mcommit 9d3894fa459e5fd071263e7af154dedb6912d82f[m
+Author: nicolasbuitrago <nicolasbuitrago@SU6-15.uninorteacad.uninorte.edu.co>
+Date:   Thu Aug 3 12:15:16 2017 -0500
+
+    First commit. clase 3/08/17
