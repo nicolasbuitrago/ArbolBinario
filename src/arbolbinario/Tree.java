@@ -15,6 +15,7 @@ import java.util.Stack;
  * @author nicolasbuitrago
  */
 public class Tree {
+
     ArrayList<Node> nodes;
 
     public Tree(int rootKey) {
