@@ -34,6 +34,7 @@ public class ArbolBinario {
         tree.orderLevelInv(tree.nodes.get(0));
         System.out.println("\nEs estable: ");
         System.out.println(tree.isEstable(tree.nodes.get(0)));
+        
     }
     
     public static void createTree(){
