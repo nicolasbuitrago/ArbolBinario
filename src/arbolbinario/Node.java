@@ -10,21 +10,21 @@ package arbolbinario;
  * @author nicolasbuitrago
  */
 public class Node {
-    String key;
+    int key;
     Node right;
     Node left;
 
-    public Node(String key) {
+    public Node(int key) {
         this.key = key;
         this.right = null;
         this.left = null;
     }
 
-    public String getKey() {
+    public int getKey() {
         return key;
     }
 
-    public void setKey(String key) {
+    public void setKey(int key) {
         this.key = key;
     }
 

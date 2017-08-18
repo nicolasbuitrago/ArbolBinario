@@ -47,7 +47,7 @@ public class ArbolBinario {
         switch (opc) {
             case 1:
                 System.out.println("Insert root Key:");
-                String nkey = leer.next(), fkey = "";
+                int nkey = leer.nextInt(), fkey = -1;
                 tree= new Tree(nkey);
                 do {
                     System.out.println("Menu");
@@ -58,9 +58,9 @@ public class ArbolBinario {
                     opc = leer.nextInt();
                     if(opc!=0) {
                         System.out.print("Insert fathers key: ");
-                        fkey = leer.next();
+                        fkey = leer.nextInt();
                         System.out.print("Insert new key: ");
-                        nkey = leer.next();
+                        nkey = leer.nextInt();
                     }
                     switch (opc) {
                         case 1:

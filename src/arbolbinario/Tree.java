@@ -17,14 +17,14 @@ import java.util.Stack;
 public class Tree {
     ArrayList<Node> nodes;
 
-    public Tree(String rootKey) {
+    public Tree(int rootKey) {
         nodes = new ArrayList();
         nodes.add(new Node(rootKey));
     }
     
-    public void addNode(String father, String key, Boolean isRight){
+    public void addNode(int father, int key, Boolean isRight){
         for(Node root : nodes){
-            if(root.getKey().equals(father)){
+            if(root.getKey()== father){
                 nodes.add(new Node(key));
                 if(isRight){
                     root.right = nodes.get(nodes.size()-1);
@@ -103,32 +103,15 @@ public class Tree {
 //            System.out.println(temp.key);
             if (temp.left!=null) {
                 queue.add(temp.left);
-                if(Integer.parseInt(temp.key)<Integer.parseInt(temp.left.key)) return false;
+                if(temp.key<temp.left.key) return false;
             }
             if (temp.right!=null) {
                 queue.add(temp.right);
-                if(Integer.parseInt(temp.key)<Integer.parseInt(temp.right.key)) return false;
+                if(temp.key<temp.right.key) return false;
             } 
         }
         return true;
     }
-    /**
-     * Funcion que solo funciona con arboles ordenados, que obviamente contengan numeros.
-     * @param elem
-     * @param P
-     * @param pad 
-     */
-     public void busqueda(int elem, Node P, Node pad){
-         P = nodes.get(0);
-         while(elem!=Integer.parseInt(P.key)&&P!=null){
-             if (elem>Integer.parseInt(P.key)) {
-                 pad = P;
-                 P=P.right;
-             }else{
-                 pad=P;
-                 P=P.left;
-             }
-         }
-     }
+    
     
 }
