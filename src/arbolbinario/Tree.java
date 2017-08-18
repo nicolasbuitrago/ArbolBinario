@@ -112,4 +112,23 @@ public class Tree {
         }
         return true;
     }
+    /**
+     * Funcion que solo funciona con arboles ordenados, que obviamente contengan numeros.
+     * @param elem
+     * @param P
+     * @param pad 
+     */
+     public void busqueda(int elem, Node P, Node pad){
+         P = nodes.get(0);
+         while(elem!=Integer.parseInt(P.key)&&P!=null){
+             if (elem>Integer.parseInt(P.key)) {
+                 pad = P;
+                 P=P.right;
+             }else{
+                 pad=P;
+                 P=P.left;
+             }
+         }
+     }
+    
 }
