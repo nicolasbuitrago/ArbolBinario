@@ -22,7 +22,12 @@ public class Tree {
         nodes = new ArrayList();
         nodes.add(new Node(rootKey));
     }
-    
+    /**
+     * Funcion que se encarga de añadir los nuevos nodos al arbol
+     * @param father
+     * @param key
+     * @param isRight 
+     */
     public void addNode(int father, int key, Boolean isRight){
         for(Node root : nodes){
             if(root.getKey()== father){
