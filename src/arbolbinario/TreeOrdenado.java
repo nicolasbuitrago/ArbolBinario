@@ -5,7 +5,6 @@
  */
 package arbolbinario;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -16,7 +15,13 @@ public class TreeOrdenado extends Tree{
     public TreeOrdenado(int rootKey) {
         super(rootKey);
     }
-    
+    /**
+     * Funcion para poder añadir nodos en un arbol que es ordenado siguiendo las reglas que esto implica
+     * @param father Es el valor que posee el padre, con el se ubica en donde se insertara el nuevo nodo
+     * @param key Es el valor del nuevo nodo que sera insertado en el arbol
+     * @param isRight Boolean con el cual se decide si el nuevo nodo sera insertado a la derecha (true) o a la izquierda (false) del padre
+     */
+    @Override
     public void addNode(int father, int key, Boolean isRight){
         for(Node root : nodes){
             if(root.getKey()== father){
