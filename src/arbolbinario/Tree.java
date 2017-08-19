@@ -62,7 +62,7 @@ public class Tree {
     }
     
     public void orderLevel(Node root){
-        Queue<Node> queue = new LinkedList<Node>();
+        Queue<Node> queue = new LinkedList();
         queue.add(root);
         while (!queue.isEmpty()) {            
             Node temp = queue.poll();
@@ -78,7 +78,7 @@ public class Tree {
     
     public void orderLevelInv(Node root){
         Stack stack = new Stack();
-        Queue<Node> queue = new LinkedList<Node>();
+        Queue<Node> queue = new LinkedList();
         queue.add(root);
         while (!queue.isEmpty()) {            
             Node temp = queue.poll();
@@ -97,11 +97,10 @@ public class Tree {
     }
     
     public boolean isEstable(Node root){
-        Queue<Node> queue = new LinkedList<Node>();
+        Queue<Node> queue = new LinkedList();
         queue.add(root);
         while (!queue.isEmpty()) {            
             Node temp = queue.poll();
-//            System.out.println(temp.key);
             if (temp.left!=null) {
                 queue.add(temp.left);
                 if(temp.key<temp.left.key) return false;
